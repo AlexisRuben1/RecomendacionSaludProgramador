@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramadorSalud.Vistas.Menuprincipal.Encabezado">
+
+    <Grid>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                
+                <Frame HasShadow="False"
+                       CornerRadius="60"
+                       Padding="15"
+                       >
+                    <Image Source="https://img.icons8.com/ios-filled/50/null/menu--v1.png" HeightRequest="25"/>
+                </Frame>
+
+                <Label Text="Recomendaciones de Salud"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="#64071B"
+                       VerticalOptions="Center"
+                       />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentView>

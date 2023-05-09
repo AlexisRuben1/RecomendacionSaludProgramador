@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramadorSalud.Vistas.Detalle.Encabezado"
+             xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+    >
+    <StackLayout Orientation="Horizontal"
+                 Margin="20"
+                 >
+        <sombras:Shadows CornerRadius="60"
+                         Shades="{sombras:SingleShade Offset='0,0', Opacity=1.0, Color=#FCAEBE,BlurRadius=15}">
+            <Frame HasShadow="False"
+                       CornerRadius="60"
+                       Padding="15"
+                       >
+            <Image Source="https://img.icons8.com/ios-filled/50/null/chevron-left.png" HeightRequest="25"/>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                </Frame.GestureRecognizers>
+        </Frame>
+        </sombras:Shadows>
+        <Label Text="Recomendacion"
+                       HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       FontSize="20"
+                       TextColor="#64071B"
+                       VerticalOptions="Center"
+                       />
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramadorSalud.Vistas.Menuprincipal.Principal"
+             xmlns:vistas="clr-namespace:ProgramadorSalud.Vistas.Menuprincipal"
+             NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#F7F7F7"
+          x:Name="listacirculo"
+          Margin="0,18,0,0">
+        <CollectionView ItemsSource="{Binding Listacirculo}"
+                        x:Name="Listacirculo"
+                        >
+            <CollectionView.Header>
+                <vistas:Encabezado/>
+            </CollectionView.Header>
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Span="2"
+                                 Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <vistas:Cuerpo>
+                        <vistas:Cuerpo.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.SeleccionarcirculoCommand,Source={x:Reference Listacirculo}}"
+   CommandParameter="{Binding .}"/>
+                        </vistas:Cuerpo.GestureRecognizers>
+                    </vistas:Cuerpo>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <vistas:Piepagina 
+            VerticalOptions="End"
+            />
+
+    </Grid>
+</ContentPage>

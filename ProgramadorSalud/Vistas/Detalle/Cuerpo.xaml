@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramadorSalud.Vistas.Detalle.Cuerpo"
+             xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
+
+             >
+    <StackLayout>
+        <Grid TranslationY="-60">
+            <Image Source="{Binding ParametroRecibe.icono}"/>
+        </Grid>
+        <Label Text="{Binding ParametroRecibe.tema}"
+               HorizontalOptions="Center"
+               FontSize="Title"
+               />
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"   
+                     >
+            <Label Text="{Binding ParametroRecibe.descripcion}"
+                   HorizontalOptions="Start"
+                   />
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentView>

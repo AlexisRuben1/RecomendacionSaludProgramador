@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProgramadorSalud.Vistas.Menuprincipal.Piepagina"
+             xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows">
+  
+    
+    <Grid HeightRequest="70"
+          BackgroundColor="#FFAFC0">
+        <sombras:Shadows CornerRadius="50"
+                         Shades="{sombras:SingleShade
+                         Offset='0,10',Opacity=0.55,Color=#FCAEBE,BlurRadius=20}"
+                         >
+            <Frame HorizontalOptions="Center"
+               HeightRequest="35"
+               WidthRequest="35"
+               VerticalOptions="Center"
+               CornerRadius="40"
+               TranslationY="-30">
+            <Frame.Background>
+                <LinearGradientBrush StartPoint="1,0">
+                    <GradientStop Color="#FCAEBE"
+                                  Offset="0.5"/>
+                    <GradientStop Color="#F95375"
+                                  Offset="1.0"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Image Source="https://img.icons8.com/dusk/64/null/heart-with-pulse.png" 
+                   Margin="1"
+                   HeightRequest="40"
+                   />
+            </Frame>
+        </sombras:Shadows>
+    </Grid>
+</ContentView>
